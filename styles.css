@@ -497,23 +497,27 @@ img { max-width: 100%; display: block; }
 
 /* CONTACT */
 .contact p { color: var(--text-muted); font-size: 17px; margin-bottom: 40px; }
-.contact__icons { display: flex; flex-wrap: wrap; gap: 20px; }
+.contact__icons { display: flex; flex-direction: column; gap: 18px; align-items: flex-start; }
 .icon-btn {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 12px;
-  width: 96px;
-  padding: 8px 0;
+  gap: 14px;
+  padding: 4px 0;
   color: var(--text-muted);
   transition: color 0.25s ease, transform 0.25s ease;
 }
-.icon-btn svg { width: 28px; height: 28px; }
-.icon-btn span { font-size: 12.5px; font-weight: 500; }
+.icon-btn svg { width: 22px; height: 22px; flex-shrink: 0; }
+.icon-btn span {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text);
+}
 .icon-btn:hover {
   color: var(--accent);
-  transform: translateY(-3px);
+  transform: translateX(4px);
 }
+.icon-btn:hover span { color: var(--accent); }
 
 .footer {
   text-align: center;
