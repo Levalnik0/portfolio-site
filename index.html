@@ -5,6 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Лиана Валеева — AI &amp; автоматизация</title>
 <meta name="description" content="Портфолио: сайты, боты, автоматизация на нейросетях, обработка фото и звука." />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Лиана Валеева — AI &amp; автоматизация" />
+<meta property="og:description" content="Портфолио: сайты, боты, автоматизация на нейросетях, обработка фото и звука." />
+<meta property="og:image" content="https://levalnik0.github.io/portfolio-site/assets/og-image.jpg" />
+<meta property="og:url" content="https://levalnik0.github.io/portfolio-site/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Лиана Валеева — AI &amp; автоматизация" />
+<meta name="twitter:description" content="Портфолио: сайты, боты, автоматизация на нейросетях, обработка фото и звука." />
+<meta name="twitter:image" content="https://levalnik0.github.io/portfolio-site/assets/og-image.jpg" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -13,8 +25,10 @@
 <body>
 
 <div class="noise"></div>
+<div class="cursor" aria-hidden="true"></div>
 
 <header class="nav">
+  <div class="nav__progress" aria-hidden="true"></div>
   <div class="nav__inner">
     <a href="#top" class="nav__logo">Лиана Валеева</a>
     <nav class="nav__links">
@@ -31,9 +45,9 @@
     <div class="hero__glow"></div>
     <p class="hero__eyebrow reveal">AI &amp; автоматизация</p>
     <h1 class="hero__title">
-      <span class="reveal">Решаю <em>задачи</em></span>
-      <span class="reveal">с нейросетями</span>
-      <span class="reveal hero__accent">и довожу до результата</span>
+      <span class="line"><span class="word">Решаю</span> <span class="word"><em>задачи</em></span></span>
+      <span class="line"><span class="word">с</span> <span class="word">нейросетями</span></span>
+      <span class="line hero__accent"><span class="word">и</span> <span class="word">довожу</span> <span class="word">до</span> <span class="word">результата</span></span>
     </h1>
     <p class="hero__sub reveal">
       Сайты, боты, обработка фото и звука, автоматизация рутины — от идеи до рабочего
@@ -54,15 +68,30 @@
     </p>
   </section>
 
+  <section class="stats">
+    <div class="stats__item reveal">
+      <span class="stats__number">08</span>
+      <span class="stats__label">проектов<br/>в портфолио</span>
+    </div>
+    <div class="stats__item reveal">
+      <span class="stats__number">2026</span>
+      <span class="stats__label">год<br/>разработки</span>
+    </div>
+    <div class="stats__item reveal">
+      <span class="stats__number">AI</span>
+      <span class="stats__label">Python · React<br/>Claude Code</span>
+    </div>
+  </section>
+
   <section id="projects" class="projects">
     <h2 class="section__title reveal">Проекты</h2>
 
-    <div class="filters reveal" role="tablist">
-      <button class="filter filter--active" data-filter="all">Все</button>
-      <button class="filter" data-filter="sites">Сайты</button>
-      <button class="filter" data-filter="bots">Боты</button>
-      <button class="filter" data-filter="automation">Автоматизация</button>
-      <button class="filter" data-filter="games">Игры</button>
+    <div class="filters reveal" role="group" aria-label="Фильтр проектов по категориям">
+      <button class="filter filter--active" data-filter="all" aria-pressed="true">Все</button>
+      <button class="filter" data-filter="sites" aria-pressed="false">Сайты</button>
+      <button class="filter" data-filter="bots" aria-pressed="false">Боты</button>
+      <button class="filter" data-filter="automation" aria-pressed="false">Автоматизация</button>
+      <button class="filter" data-filter="games" aria-pressed="false">Игры</button>
     </div>
 
     <div class="grid">

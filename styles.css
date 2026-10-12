@@ -48,6 +48,14 @@ img { max-width: 100%; display: block; }
   background: rgba(10, 13, 18, 0.7);
   border-bottom: 1px solid var(--border);
 }
+.nav__progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: var(--gradient);
+}
 .nav__inner {
   max-width: var(--container);
   margin: 0 auto;
@@ -103,13 +111,22 @@ img { max-width: 100%; display: block; }
   line-height: 1.08;
   letter-spacing: -0.02em;
 }
-.hero__title span { display: block; }
+.hero__title .line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.08em;
+}
+.hero__title .word {
+  display: inline-block;
+  transform: translateY(100%);
+  will-change: transform;
+}
 .hero__title em {
   font-style: italic;
   font-weight: 500;
   color: var(--text-muted);
 }
-.hero__accent {
+.hero__accent .word {
   background: var(--gradient);
   -webkit-background-clip: text;
   background-clip: text;
@@ -147,6 +164,33 @@ img { max-width: 100%; display: block; }
   color: var(--text);
 }
 .btn--ghost:hover { border-color: var(--accent); }
+
+/* STATS */
+.stats {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px 100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+}
+.stats__item { display: flex; align-items: baseline; gap: 16px; }
+.stats__number {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(48px, 8vw, 96px);
+  line-height: 1;
+  -webkit-text-stroke: 1.5px var(--text);
+  color: transparent;
+  letter-spacing: -0.02em;
+}
+.stats__label {
+  font-size: 13px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+}
 
 /* INTRO */
 .intro {
@@ -322,6 +366,34 @@ img { max-width: 100%; display: block; }
   padding: 40px 24px 60px;
   color: var(--text-muted);
   font-size: 13px;
+}
+
+/* FOCUS (keyboard navigation) */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* CUSTOM CURSOR (desktop pointer only) */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent);
+  pointer-events: none;
+  z-index: 999;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+  transition: width 0.25s ease, height 0.25s ease;
+}
+.cursor--hover { width: 44px; height: 44px; }
+@media (hover: none), (pointer: coarse) {
+  .cursor { display: none; }
 }
 
 /* REVEAL (initial state before GSAP) */
