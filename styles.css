@@ -100,6 +100,8 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 10px;
 }
 .nav__logo {
   font-family: var(--font-display);
@@ -207,11 +209,14 @@ img { max-width: 100%; display: block; }
   max-width: var(--container);
   margin: 0 auto;
   padding: 0 24px 100px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 48px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
 }
 .stats__item { display: flex; align-items: baseline; gap: 16px; }
+@media (max-width: 680px) {
+  .stats { grid-template-columns: 1fr; gap: 28px; }
+}
 .stats__number {
   font-family: var(--font-display);
   font-weight: 700;
@@ -559,4 +564,10 @@ button:focus-visible {
   .hero { padding: 90px 20px 60px; }
   .nav__links { gap: 16px; }
   .projects, .skills, .contact, .intro { padding-left: 20px; padding-right: 20px; }
+}
+
+@media (max-width: 420px) {
+  .nav__inner { justify-content: center; text-align: center; }
+  .nav__links { gap: 10px 14px; justify-content: center; }
+  .nav__links a { font-size: 12.5px; }
 }
