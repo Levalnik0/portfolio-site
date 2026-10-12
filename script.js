@@ -54,16 +54,15 @@ if (prefersReducedMotion) {
     });
   });
 
-  // Project cards: fade-up + scale + slight 3D tilt
+  // Project cards: fade-up + scale
   gsap.utils.toArray(".card").forEach((card) => {
     gsap.fromTo(
       card,
-      { opacity: 0, y: 32, scale: 0.98, rotateX: 8 },
+      { opacity: 0, y: 32, scale: 0.98 },
       {
         opacity: 1,
         y: 0,
         scale: 1,
-        rotateX: 0,
         duration: 0.7,
         ease: "power3.out",
         scrollTrigger: {
