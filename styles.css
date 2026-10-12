@@ -286,7 +286,7 @@ img { max-width: 100%; display: block; }
   border-color: var(--text);
 }
 
-.card--hidden { display: none; }
+.card.card--hidden { display: none; }
 
 /* GRID / CARDS */
 .grid {
