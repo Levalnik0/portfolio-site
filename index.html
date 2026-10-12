@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Лиана Валеева — AI &amp; автоматизация</title>
+<meta name="description" content="Портфолио: сайты, боты, автоматизация на нейросетях, обработка фото и звука." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="noise"></div>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a href="#top" class="nav__logo">Лиана Валеева</a>
+    <nav class="nav__links">
+      <a href="#projects">Проекты</a>
+      <a href="#skills">Инструменты</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero__glow"></div>
+    <p class="hero__eyebrow reveal">AI &amp; автоматизация</p>
+    <h1 class="hero__title">
+      <span class="reveal">Решаю <em>задачи</em></span>
+      <span class="reveal">с нейросетями</span>
+      <span class="reveal hero__accent">и довожу до результата</span>
+    </h1>
+    <p class="hero__sub reveal">
+      Сайты, боты, обработка фото и звука, автоматизация рутины — от идеи до рабочего
+      инструмента. Ниже — реальные проекты, не макеты.
+    </p>
+    <div class="hero__cta reveal">
+      <a href="#projects" class="btn btn--primary">Смотреть проекты</a>
+      <a href="https://github.com/Levalnik0" target="_blank" rel="noopener" class="btn btn--ghost">GitHub</a>
+    </div>
+  </section>
+
+  <section class="intro">
+    <p class="intro__text reveal">
+      Нейросети — мой основной рабочий инструмент, а не тема для разговора. Пишу код
+      с Claude Code, собираю рабочие пайплайны на Python, разбираюсь в новых
+      инструментах и довожу их до продакшена: проверяю результат, нахожу баги,
+      переписываю, если нейросеть ошиблась.
+    </p>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2 class="section__title reveal">Проекты</h2>
+
+    <div class="filters reveal" role="tablist">
+      <button class="filter filter--active" data-filter="all">Все</button>
+      <button class="filter" data-filter="sites">Сайты</button>
+      <button class="filter" data-filter="bots">Боты</button>
+      <button class="filter" data-filter="automation">Автоматизация</button>
+      <button class="filter" data-filter="games">Игры</button>
+    </div>
+
+    <div class="grid">
+
+      <article class="card card--photo reveal" data-category="games">
+        <div class="card__media">
+          <img src="assets/img/night-shift.jpg" alt="Сцена из игры «Ночная смена»" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <span class="card__tag">Roblox / Luau</span>
+          <h3>«Ночная смена»</h3>
+          <p>Кооперативный психологический хоррор в ночной кофейне. Код на Luau через
+            Rojo, сцена собрана через Claude Code + Blender по MCP.</p>
+          <div class="card__links">
+            <a href="https://github.com/Levalnik0/night-shift" target="_blank" rel="noopener">Код →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card card--split reveal" data-category="automation">
+        <div class="card__media card__media--split">
+          <img src="assets/img/sneakers-before.jpg" alt="Фото до обработки" loading="lazy" />
+          <img src="assets/img/sneakers-after.jpg" alt="Фото после обработки" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <span class="card__tag">Python / rembg</span>
+          <h3>Автоматизация фото</h3>
+          <p>Скрипт убирает фон, повышает резкость и контраст, готовит вариант на
+            белой подложке для карточек товара — одной командой.</p>
+          <div class="card__links">
+            <a href="https://github.com/Levalnik0/photo-automation" target="_blank" rel="noopener">Код →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card card--photo reveal" data-category="sites">
+        <div class="card__media">
+          <img src="assets/img/echo.jpg" alt="Экран приложения «Эхо»" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <span class="card__tag">React / TypeScript / PWA</span>
+          <h3>Проект «Эхо»</h3>
+          <p>Мост доверия между подростками и родителями: квесты, зеркальные тесты
+            «угадай ответ», разбор подозрительных сообщений. Полностью мой проект —
+            от психологической механики до кода.</p>
+          <div class="card__links">
+            <a href="https://levalnik0.github.io/proekt-eho/" target="_blank" rel="noopener">Открыть →</a>
+            <a href="https://github.com/Levalnik0/proekt-eho" target="_blank" rel="noopener">Код →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card card--icon reveal" data-category="bots">
+        <div class="card__media card__media--icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M8 10h8M8 14h5M21 12c0 4.97-4.03 9-9 9-1.5 0-2.9-.37-4.14-1.02L3 21l1.1-3.68A8.96 8.96 0 0 1 3 12c0-4.97 4.03-9 9-9s9 4.03 9 9Z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="card__body">
+          <span class="card__tag">Telegram / LLM API</span>
+          <h3>Telegram-бот для SMM</h3>
+          <p>Генерация постов по шаблону канала, сторис, снижение цены, монтаж
+            видео — автоматизация контента для автоблога.</p>
+          <div class="card__links">
+            <a href="https://github.com/Levalnik0/avtoblog-bot" target="_blank" rel="noopener">Код →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card card--icon reveal" data-category="automation">
+        <div class="card__media card__media--icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M4 4h16v12H5.17L4 17.17V4Z" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 9h8M8 12h5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="card__body">
+          <span class="card__tag">Python / Claude API</span>
+          <h3>ТЗ из переписки</h3>
+          <p>Разбирает диалог клиент↔подрядчик и собирает структурированное ТЗ:
+            цели, требования, объём работ, открытые вопросы.</p>
+          <div class="card__links">
+            <a href="https://github.com/Levalnik0/tor-from-chat" target="_blank" rel="noopener">Код →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card card--icon reveal" data-category="automation">
+        <div class="card__media card__media--icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M19 10v1a7 7 0 0 1-14 0v-1M12 18v4M9 22h6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="card__body">
+          <span class="card__tag">Python / Whisper</span>
+          <h3>Расшифровка встреч</h3>
+          <p>Шумоподавление + Whisper-транскрипция + выделение договорённостей.
+            Собственная тестовая запись — весь пайплайн шумоподавления и
+            транскрипции прогнан по-настоящему.</p>
+          <div class="card__links">
+            <a href="https://github.com/Levalnik0/audio-automation" target="_blank" rel="noopener">Код →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card card--icon reveal" data-category="sites">
+        <div class="card__media card__media--icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 10.5 12 3l9 7.5M5 9.5V20a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V9.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="card__body">
+          <span class="card__tag">Laravel / Tailwind</span>
+          <h3>AvtoBlog</h3>
+          <p>Сайт автосервиса: выкуп, продажа, обмен, кредит и trade-in. AI
+            чат-бот для быстрых вопросов и подбора авто под запрос.</p>
+          <div class="card__links">
+            <a href="https://github.com/Levalnik0/autoblog" target="_blank" rel="noopener">Код →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card card--icon reveal" data-category="automation">
+        <div class="card__media card__media--icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 21s-7-5.2-9.5-9.4C.6 8 2.4 4.5 6 4.5c2 0 3.3 1 4 2 .7-1 2-2 4-2 3.6 0 5.4 3.5 3.5 7.1C19 15.8 12 21 12 21Z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="card__body">
+          <span class="card__tag">Python / Claude API</span>
+          <h3>Карточка компании</h3>
+          <p>Из короткого брифа о бизнесе собирает готовый текст карточки для
+            Яндекс.Карт/2ГИС: описание, категория, услуги, превью.</p>
+          <div class="card__links">
+            <a href="https://github.com/Levalnik0/company-card-generator" target="_blank" rel="noopener">Код →</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2 class="section__title reveal">Инструменты</h2>
+    <ul class="skills__list reveal">
+      <li>Claude Code</li>
+      <li>ChatGPT</li>
+      <li>MCP</li>
+      <li>Blender</li>
+      <li>Laravel</li>
+      <li>Tailwind</li>
+      <li>React / TypeScript</li>
+      <li>Python</li>
+      <li>Whisper</li>
+      <li>rembg</li>
+      <li>Git / GitHub</li>
+      <li>Chrome DevTools</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 class="section__title reveal">Контакты</h2>
+    <p class="reveal">Готова к тестовому заданию и новым проектам.</p>
+    <div class="contact__links reveal">
+      <a href="mailto:lianaval2005@gmail.com">lianaval2005@gmail.com</a>
+      <a href="tel:+79625561205">+7 962 556-12-05</a>
+      <a href="https://github.com/Levalnik0" target="_blank" rel="noopener">github.com/Levalnik0</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Собрано вручную, с нейросетями в соавторах.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
